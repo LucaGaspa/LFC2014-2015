@@ -18,8 +18,8 @@ int ex(nodeType *p, symrec * symTable) {
                             }
         case typeId:        {
                                 symrec * s= getsymTable(p->id.name, symTable);
-                                if( s == NULL){
-                                    printf("there is not such %s varibale in the symtable\n", p->id.name);
+                                if(s == NULL){
+                                    printf("there is not such '%s' varibale in the symtable\n", p->id.name);
                                     exit(0);
                                 }
                                 return s->value;
@@ -57,6 +57,10 @@ int ex(nodeType *p, symrec * symTable) {
                 case ';':       ex(p->opr.op[0], symTable); return ex(p->opr.op[1], symTable);
                 case '=':       {   
                                     symrec * s= getsymTable(p->opr.op[0]->id.name, symTable);
+                                    if(s == NULL){
+                                        printf("there is not such '%s' varibale in the symtable\n", p->opr.op[0]->id.name);
+                                        exit(0);
+                                    }
                                     return s->value = ex(p->opr.op[1], symTable);
                                     }
                 case UMINUS:    return -ex(p->opr.op[0], symTable);

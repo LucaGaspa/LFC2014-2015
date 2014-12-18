@@ -3,17 +3,6 @@
  * revision Lorenzo Massimo Gramola (2014)
 */
 
-
-/**
-mackbook-pro:5.0 - calc functions Lorenzo$ yacc calc.y 
-calc.y:46.14: warning: empty rule for typed nonterminal, and no action
-2 rules never reduced
-calc.y: warning: 1 useless nonterminal and 2 useless rules
-calc.y:73.1-8: warning: useless nonterminal: function
-calc.y:74.9-21: warning: useless rule: function: function stmt
-calc.y:75.10: warning: useless rule: function: empty 
-
-*/
 %{
     #include <stdio.h>
     #include <stdlib.h>

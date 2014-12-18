@@ -1,0 +1,16 @@
+example on functions and procedures declarations and evaluations
+
+4 warnings expected --> TODO: fix warnings
+
+basic test files are stored in the directory basic tests
+
+input files for the example are:
+fun1
+fun3
+funTestEnv
+proc1
+fun_wrong
+
+
+
+CC = gcc -std=c99

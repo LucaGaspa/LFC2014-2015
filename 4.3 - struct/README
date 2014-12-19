@@ -1,0 +1,17 @@
+
+
+NOTA BENE:
+those having troubles in compiling the source due to how the c for statement is written 
+
+"for(int i .....)"
+
+should try to change the CC definition in the make file to be like the following:
+
+CC = gcc -std=c99
+
+
+ANOTHER NOTE:
+
+This is an example on how to NOT write C code.
+This example contains some (a lot) of memory leaks. I didn't have enougth time to rewrite the code or check for memory leaks, eventhough they may be spotted easly to a trained eye.
+

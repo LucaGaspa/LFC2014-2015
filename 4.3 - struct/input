@@ -1,4 +1,5 @@
 record { int ciao; int casper; int ciccio; int puzza; int molla; } fantasmi; int conanDoyle;
 {
-	print ciao;	
+	fantasmi.ciao = 9;
+	print fantasmi.ciao;	
 }

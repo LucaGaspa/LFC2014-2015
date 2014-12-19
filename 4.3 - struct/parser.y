@@ -59,7 +59,7 @@ opt_cmd_list:	/*empty*/
 				| cmd_list
 				;
 cmd_list:		cmd SEMICOLON
-				| cmd SEMICOLON cmd_list
+				| cmd_list cmd SEMICOLON
 				;
 cmd:		 		/*empty*/
 					| L '=' R  {
